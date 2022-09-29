@@ -24,5 +24,28 @@ namespace JournalApp
         {
             InitializeComponent();
         }
+
+
+
+        private void disciplinesMouseEnter(object sender, MouseEventArgs e)
+        {
+            disciplines.Visibility = Visibility.Visible;
+        }
+
+        private void disciplinesMouseLeave(object sender, MouseEventArgs e)
+        {
+            disciplines.Visibility = Visibility.Collapsed;
+        }
+
+        private void groupMouseEnter(object sender, MouseEventArgs e)
+        {
+            group.Visibility = Visibility.Visible;
+
+        }
+
+        private void groupMouseLeave(object sender, MouseEventArgs e)
+        {
+            group.Visibility = Visibility.Collapsed;
+        }
     }
 }

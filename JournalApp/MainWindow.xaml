@@ -9,20 +9,68 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#c3d6dc" Grid.RowSpan="2">
-            <StackPanel>
-                <Image Height="110" Source="Image1.png"/>
-                <Label Content="                  Профиль"/>
-                <Image Height="110" Source="Image2.png"/>
-                <Label Content="                    Группы"/>
-                <Image Height="110" Source="Image3.png"/>
-                <Label Content="               Дисциплины"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Background="#c3d6dc">
+                <Image Height="100" Source="Image1.png"/>
+                    <Label Content="Профиль" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+
+        <StackPanel Grid.Row="1" Background="#c3d6dc" x:Name="Groups" MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave">
+                <Image Height="100" Source="Image2.png" />
+                    <Label Content="Группы" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+
+        <StackPanel Grid.Row="2" Background="#c3d6dc" x:Name="Disciplines" MouseEnter="disciplinesMouseEnter" MouseLeave="disciplinesMouseLeave">
+                <Image Height="100" Source="Image3.png"/>
+                <Label Content="Дисциплины" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Background="#c3d6dc">
+
+        </StackPanel>
+
+
+            <Frame Grid.Column="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <Slider Grid.Column="3" Grid.Row="3" HorizontalAlignment="Right"  Height="20" Width="200" VerticalAlignment="Bottom"/>
+
+
+        <ScrollViewer Visibility="Collapsed" x:Name="group" MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="1" >
+            <StackPanel Grid.Column="1" Grid.Row="1"  ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="90" >
+                <Button Content="Группа 1" Background="#c3d6dc"/>
+                <Button Content="Группа 2" Background="#c3d6dc"/>
+                <Button Content="Группа 3" Background="#c3d6dc"/>
+                <Button Content="Группа 4" Background="#c3d6dc"/>
+                <Button Content="Группа 5" Background="#c3d6dc"/>
+                <Button Content="Группа 6" Background="#c3d6dc"/>
+                <Button Content="Группа 7" Background="#c3d6dc"/>
+                <Button Content="Группа 8" Background="#c3d6dc"/>
+                <Button Content="Группа 9" Background="#c3d6dc"/>
+                <Button Content="Группа 10" Background="#c3d6dc"/>
             </StackPanel>
-        </Grid>
-        <Frame Grid.Column="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
-        <Slider Grid.Column="1" HorizontalAlignment="Right"  Height="20" Width="200" VerticalAlignment="Bottom"/>
+        </ScrollViewer>
+
+        <ScrollViewer  Visibility="Collapsed" x:Name="disciplines" MouseEnter="disciplinesMouseEnter" MouseLeave="disciplinesMouseLeave" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="2" >
+            <StackPanel Grid.Column="1" Grid.Row="2" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="90" >
+                <Button Content="Физика" Background="#c3d6dc"/>
+                <Button Content="Химия" Background="#c3d6dc"/>
+                <Button Content="Математика" Background="#c3d6dc"/>
+                <Button Content="Информатика" Background="#c3d6dc"/>
+                <Button Content="Философия" Background="#c3d6dc"/>
+                <Button Content="Физультура" Background="#c3d6dc"/>
+                <Button Content="Физика" Background="#c3d6dc" />
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
