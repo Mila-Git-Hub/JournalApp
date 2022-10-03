@@ -42,8 +42,8 @@
         </StackPanel>
 
 
-            <Frame Grid.Column="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
-        <Slider Grid.Column="3" Grid.Row="3" HorizontalAlignment="Right"  Height="20" Width="200" VerticalAlignment="Bottom"/>
+            <Frame Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="4" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <Slider Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right"  Height="20" Width="200" VerticalAlignment="Bottom"/>
 
 
         <ScrollViewer Visibility="Collapsed" x:Name="group" MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="1" >
