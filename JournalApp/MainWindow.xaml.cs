@@ -23,6 +23,7 @@ namespace JournalApp
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new Page1());
         }
 
 
