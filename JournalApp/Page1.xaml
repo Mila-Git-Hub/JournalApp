@@ -14,19 +14,21 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
             <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition Width="78.125" />
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="87"/>
+            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="40" />
         </Grid.ColumnDefinitions>
-        <DataGrid Grid.Row="1" Grid.ColumnSpan="5" Background="#c3d6dc">
+        <DataGrid Grid.Row="1" Grid.ColumnSpan="6" Background="#c3d6dc">
         </DataGrid>
 
-        <TextBox Width="180" Height="25" Background="#c3d6dc" VerticalAlignment="Top" />
-        <Button Width="100" Height="25" Grid.Column="1" Content="Добавить группу" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
-        <Button Width="100" Height="25" Grid.Column="2" Content="Добавить лабу" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
-        <Button Width="100" Height="25" Grid.Column="3" Content="Создать отчет" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
-        <Button Width="70" Height="25" Grid.Column="4" Content="Выйти" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <TextBox Width="172" Height="25" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <Button Width="97" Height="25" Grid.Column="1" Content="Добавить группу" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Button Width="97" Height="25" Grid.Column="2" Content="Создать предмет" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Button Width="85" Height="25" Grid.Column="3" Content="Добавить лабу" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Button Width="80" Height="25" Grid.Column="4" Content="Создать отчет" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <Button Width="38" Height="25" Grid.Column="5" Content="Выйти" Background="#c3d6dc" VerticalAlignment="Top" HorizontalAlignment="Center" />
     </Grid>
 </Page>
