@@ -20,12 +20,21 @@ namespace JournalApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        JournalBDEntities context;
         public MainWindow()
         {
             InitializeComponent();
-            JournalBDEntities context = new JournalBDEntities();
+            context = new JournalBDEntities();
+            List<Group> groups = context.Group.ToList(); 
+            group.ItemsSource = context.Group.ToList();
             MainFrame.Navigate(new Page1());
+
+
+            //context = new masterEntities1();
+            //group.ItemsSource = context.Group.Select(x => x.title).ToList();
         }
+
+
 
 
 
@@ -48,6 +57,13 @@ namespace JournalApp
         private void groupMouseLeave(object sender, MouseEventArgs e)
         {
             group.Visibility = Visibility.Collapsed;
+        }
+
+        private void GoGroup(object sender, MouseButtonEventArgs e)
+        {
+            Group group = (sender as Grid).DataContext as Group;
+            MainFrame.Navigate(new Page2(group,context));
+ 
         }
     }
 }
