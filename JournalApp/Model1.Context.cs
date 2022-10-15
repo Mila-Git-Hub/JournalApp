@@ -32,5 +32,6 @@ namespace JournalApp
         public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<StudenttoSubject> StudenttoSubject { get; set; }
         public virtual DbSet<Subject> Subject { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

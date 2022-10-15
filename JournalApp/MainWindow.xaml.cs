@@ -25,10 +25,18 @@ namespace JournalApp
         {
             InitializeComponent();
             context = new JournalBDEntities();
-            List<Group> groups = context.Group.ToList();
+            List<Group> groups = context.Group.ToList(); 
             group.ItemsSource = context.Group.ToList();
             MainFrame.Navigate(new Page1());
+
+
+            //context = new masterEntities1();
+            //group.ItemsSource = context.Group.Select(x => x.title).ToList();
         }
+
+
+
+
 
         private void disciplinesMouseEnter(object sender, MouseEventArgs e)
         {
@@ -53,7 +61,9 @@ namespace JournalApp
 
         private void GoGroup(object sender, MouseButtonEventArgs e)
         {
-
+            Group group = (sender as Grid).DataContext as Group;
+            MainFrame.Navigate(new Page2(group,context));
+ 
         }
     }
 }

@@ -22,19 +22,19 @@
 
 
 
-        <StackPanel Background="#c3d6dc">
-                <Image Height="100" Source="Image1.png"/>
-                    <Label Content="Профиль" HorizontalContentAlignment="Center"/>
+        <StackPanel Background="#c3d6dc" >
+            <Image Height="100" Source="Image1.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Label Content="Профиль" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                 </StackPanel>
 
-        <StackPanel Grid.Row="1" Background="#c3d6dc" x:Name="Groups" MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave">
-                <Image Height="100" Source="Image2.png" />
-                    <Label Content="Группы" HorizontalContentAlignment="Center"/>
+        <StackPanel Grid.Row="1" Background="#c3d6dc" x:Name="Groups" MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave" >
+            <Image Height="100" Source="Image2.png" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Label Content="Группы" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                 </StackPanel>
 
-        <StackPanel Grid.Row="2" Background="#c3d6dc" x:Name="Disciplines" MouseEnter="disciplinesMouseEnter" MouseLeave="disciplinesMouseLeave">
-                <Image Height="100" Source="Image3.png"/>
-                <Label Content="Дисциплины" HorizontalContentAlignment="Center"/>
+        <StackPanel Grid.Row="2" Background="#c3d6dc" x:Name="Disciplines" MouseEnter="disciplinesMouseEnter" MouseLeave="disciplinesMouseLeave" >
+            <Image Height="100" Source="Image3.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Label Content="Дисциплины" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
         </StackPanel>
 
         <StackPanel Grid.Row="4" Background="#c3d6dc">
@@ -46,21 +46,23 @@
         <Slider Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right"  Height="20" Width="200" VerticalAlignment="Bottom"/>
 
 
-        <ListView Grid.Row="1" Visibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="group" MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave" Grid.Column="1" Background="#c3d6dc" >
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <Grid Width="90" Height="20" MouseLeftButtonDown="GoGroup">
-                    <TextBlock Text="{Binding title}"></TextBlock>
-                </Grid>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-        <ListView.ItemsPanel>
-            <ItemsPanelTemplate>
-                <StackPanel/>
-            </ItemsPanelTemplate>
-        </ListView.ItemsPanel>
-        </ListView>
 
+
+        <ListView Grid.Row="1"  Visibility="Collapsed" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="group"  MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave" Grid.Column="1" Background="#c3d6dc" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="90" Height="20" MouseLeftButtonDown="GoGroup">
+                        <TextBlock Text="{Binding title}"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+        
         <ScrollViewer  Visibility="Collapsed" x:Name="disciplines" MouseEnter="disciplinesMouseEnter" MouseLeave="disciplinesMouseLeave" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="2" >
             <StackPanel Grid.Column="1" Grid.Row="2" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="90" >
                 <Button Content="Физика" Background="#c3d6dc"/>

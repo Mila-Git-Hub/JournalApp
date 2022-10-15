@@ -20,9 +20,11 @@ namespace JournalApp
     /// </summary>
     public partial class Page2 : Page
     {
-        public Page2()
+        JournalBDEntities context;
+        Group group;
+        public Page2(Group group, JournalBDEntities context)
         {
             InitializeComponent();
-        }
-    }
+        } 
+    } 
 }
