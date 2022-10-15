@@ -8,5 +8,8 @@
             <Setter Property="FontFamily" Value="TroubleSide"/>
             <Setter Property="Background" Value="White"/>
         </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="TroubleSide"/>
+        </Style>
     </Application.Resources>
 </Application>

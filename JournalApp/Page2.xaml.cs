@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace JournalApp
 {
     /// <summary>
-    /// Логика взаимодействия для Page1.xaml
+    /// Логика взаимодействия для Page2.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Page2 : Page
     {
-        public Page1()
+        public Page2()
         {
             InitializeComponent();
-        }
-
-        private void AddGroup(object sender, RoutedEventArgs e)
-        {
-            SecondFrame.Navigate(new AddGroupPage());
         }
     }
 }

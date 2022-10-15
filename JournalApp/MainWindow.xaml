@@ -46,20 +46,20 @@
         <Slider Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right"  Height="20" Width="200" VerticalAlignment="Bottom"/>
 
 
-        <ScrollViewer Visibility="Collapsed" x:Name="group" MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="1" >
-            <StackPanel Grid.Column="1" Grid.Row="1"  ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="90" >
-                <Button Content="Группа 1" Background="#c3d6dc"/>
-                <Button Content="Группа 2" Background="#c3d6dc"/>
-                <Button Content="Группа 3" Background="#c3d6dc"/>
-                <Button Content="Группа 4" Background="#c3d6dc"/>
-                <Button Content="Группа 5" Background="#c3d6dc"/>
-                <Button Content="Группа 6" Background="#c3d6dc"/>
-                <Button Content="Группа 7" Background="#c3d6dc"/>
-                <Button Content="Группа 8" Background="#c3d6dc"/>
-                <Button Content="Группа 9" Background="#c3d6dc"/>
-                <Button Content="Группа 10" Background="#c3d6dc"/>
-            </StackPanel>
-        </ScrollViewer>
+        <ListView Grid.Row="1" Visibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="group" MouseEnter="groupMouseEnter" MouseLeave="groupMouseLeave" Grid.Column="1" Background="#c3d6dc" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <Grid Width="90" Height="20" MouseLeftButtonDown="GoGroup">
+                    <TextBlock Text="{Binding title}"></TextBlock>
+                </Grid>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel/>
+            </ItemsPanelTemplate>
+        </ListView.ItemsPanel>
+        </ListView>
 
         <ScrollViewer  Visibility="Collapsed" x:Name="disciplines" MouseEnter="disciplinesMouseEnter" MouseLeave="disciplinesMouseLeave" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="2" >
             <StackPanel Grid.Column="1" Grid.Row="2" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="90" >

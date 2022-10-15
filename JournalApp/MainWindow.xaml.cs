@@ -20,14 +20,15 @@ namespace JournalApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        JournalBDEntities context;
         public MainWindow()
         {
             InitializeComponent();
-            JournalBDEntities context = new JournalBDEntities();
+            context = new JournalBDEntities();
+            List<Group> groups = context.Group.ToList();
+            group.ItemsSource = context.Group.ToList();
             MainFrame.Navigate(new Page1());
         }
-
-
 
         private void disciplinesMouseEnter(object sender, MouseEventArgs e)
         {
@@ -48,6 +49,11 @@ namespace JournalApp
         private void groupMouseLeave(object sender, MouseEventArgs e)
         {
             group.Visibility = Visibility.Collapsed;
+        }
+
+        private void GoGroup(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

@@ -25,5 +25,10 @@ namespace JournalApp
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Student { get; set; }
+
+        public static implicit operator Group(List<object> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
